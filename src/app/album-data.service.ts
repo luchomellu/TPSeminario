@@ -8,6 +8,12 @@ const Url = 'https://63854a5bbeaa6458265ce572.mockapi.io/super-spotify'
   providedIn: 'root'
 })
 export class AlbumDataService {
+  postAlbum(form : Album) {
+    return this.http.post(Url,form)
+    .subscribe((res) =>{
+      console.log(res);
+    });
+  }
 
   constructor(private http: HttpClient) { }
 

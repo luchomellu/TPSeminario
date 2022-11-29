@@ -9,6 +9,7 @@ import { AlbumListComponent } from './album-list/album-list.component';
 import { AlbumPlayerComponent } from './album-player/album-player.component';
 import { FormsModule } from '@angular/forms';
 import { SafePipe } from './safe.pipe';
+import { AddFormComponent } from './add-form/add-form.component';
 
 
 @NgModule({
@@ -17,11 +18,13 @@ import { SafePipe } from './safe.pipe';
     AlbumListComponent,
     AlbumPlayerComponent,
     SafePipe,
+    AddFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
     
   ],
   providers: [],

@@ -4,5 +4,5 @@ export interface Album{
     lenght: number,
     link: string,
     image: string,
-    id: number
+    id?: number
 }

@@ -1,3 +1,14 @@
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-dark bg-gradient">
+  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-light text-decoration-none">
+    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+    <span class="fs-4">Super-Spotify</span>
+  </a>
+  <ul class="nav nav-pills">
+    <li class="nav-item"><a [routerLink]="['/home']" class="nav-link link-light" aria-current="page">Home</a></li>
+    <li class="nav-item"><a [routerLink]="['/form']" class="nav-link link-light">Features</a></li>
+
+  </ul>
+</header>
 <div class="container">
-  <app-album-list></app-album-list>
+  <router-outlet></router-outlet>
 </div>
