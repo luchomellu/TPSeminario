@@ -6,6 +6,7 @@ import { Album } from './album-list/Album';
   providedIn: 'root'
 })
 export class MediaServiceService {
+  
   private _albumPlaying : Album = {
     album: "Discovery",
     artist: "Daft Punk",
@@ -14,6 +15,7 @@ export class MediaServiceService {
     image: "https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png",
     id: 2
   };
+  
   albumPlaying : BehaviorSubject<Album> = new BehaviorSubject(this._albumPlaying);
 
   constructor() {}
