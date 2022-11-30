@@ -10,10 +10,21 @@ import { Album } from './Album';
 })
 export class AlbumListComponent {
   
+  albumPlaying : Album = {
+    album: "Discovery",
+    artist: "Daft Punk",
+    lenght: 65,
+    link: "https://www.youtube.com/embed/mdw1JeDjWH8",
+    image: "https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png",
+    id: 2
+  }
+
   constructor(
     private mediaService: MediaServiceService,
     private albumDataService: AlbumDataService)
-  {};
+  {
+    mediaService.albumPlaying.subscribe(c => this.albumPlaying = c)
+  };
 
   ngOnInit(): void{
     this.albumDataService.getAlbums().subscribe(data => this.albums = data);

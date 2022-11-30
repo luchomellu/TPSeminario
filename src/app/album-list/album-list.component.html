@@ -1,6 +1,6 @@
 <div class="album-container">
     <div class="album-list">
-        <div  *ngFor="let album of albums" class="album text-bg-dark">
+        <div *ngFor="let album of albums" class="album" [ngClass]="{'text-bg-success': album.id == albumPlaying.id, 'text-bg-dark': album.id != albumPlaying.id }">
             <img [src]="album.image" alt="">
             <h1>{{album.album}}</h1>
             <h2>{{album.artist}}</h2>

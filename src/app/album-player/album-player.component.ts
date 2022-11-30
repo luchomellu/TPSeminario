@@ -18,7 +18,6 @@ export class AlbumPlayerComponent {
     id: 2
   }
   constructor(private mediaService: MediaServiceService){
-    mediaService.albumPlaying.subscribe(c => this.albumPlaying = c
-                                              )
+    mediaService.albumPlaying.subscribe(c => this.albumPlaying = c)
   };
 }
